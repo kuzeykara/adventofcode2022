@@ -1,0 +1,4 @@
+template.txt
+**/node_modules
+
+**/*.js

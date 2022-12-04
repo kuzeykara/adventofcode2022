@@ -1,0 +1,16 @@
+{
+  "name": "day03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "npm run build && node ./day03.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.10"
+  }
+}
