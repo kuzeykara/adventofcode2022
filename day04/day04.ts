@@ -43,14 +43,7 @@ function part01() {
 
 function part02() {
     function overlaps(assignment1: number[], assignment2: number[]): boolean {
-        if 
-        (
-            (assignment1[0] <= assignment2[0] && assignment1[1] >= assignment2[1]) &&
-            (assignment2[0] <= assignment1[0] && assignment2[1] >= assignment1[1])
-        ) {
-            // contains
-            return true;
-        } else if
+        if
         (
             (assignment1[1] >= assignment2[0] && assignment1[0] <= assignment2[1]) && 
             (assignment2[1] >= assignment1[0] && assignment2[0] <= assignment1[1])

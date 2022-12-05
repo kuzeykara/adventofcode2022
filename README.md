@@ -1,4 +1,4 @@
-## My solutions for the Advent of Code 2022 challanges
+## My solutions for the Advent of Code 2022 challenges
 
 All solutions are written in TypeScript since I am currently learning it.
 
