@@ -54,8 +54,54 @@ function part01() {
 }
 
 function part02() {
-    
+    function shiftArrayRight(array: string[], newElement: string): string[] {
+        let newArr: string[] = [];
+        
+        for (let i=1; i<array.length; i++) {
+            newArr.push(array[i]);
+        }
+        newArr.push(newElement);
+        
+        return newArr;
+    }
+
+    function isUnique(input: string[]): boolean {
+        let seenValues: string[] = [];
+        for (let i=0; i<input.length; i++) {
+            if (seenValues.includes(input[i])) {
+                return false;
+            }
+            seenValues.push(input[i]);
+        } 
+        return true;
+    }
+
+    function findMsgMarkerPosition(data: string): number {
+        let last14Chars: string[] = [];
+
+        for (let i=0; i<data.length; i++) {
+            let currChar = data.charAt(i);
+            if (i<=13) {
+                last14Chars.push(currChar);
+            } else {
+                if (isUnique(last14Chars)) {
+                    //found it!
+                    return i;
+                } else {
+                    //switch
+                    last14Chars = shiftArrayRight(last14Chars, currChar);
+                }
+            }
+        }
+
+        return -1;
+    }
+
+    const datastream: string = input;
+    const msgMarkerPos: number = findMsgMarkerPosition(datastream);
+
+    console.log(msgMarkerPos);
 }
 
-part01();
-//part02();
+//part01();
+part02();
