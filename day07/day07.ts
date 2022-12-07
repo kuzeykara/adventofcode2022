@@ -339,7 +339,7 @@ function part02() {
     console.log(`Current available disk space: ${totalUsedSpace}\nSpace to be freed: ${toDelete}`);
     console.log(`Deletable directories: `);
     deletableDirectories.forEach( (directory: IDirectory) => {
-        console.log(`${directory.name} (size: ${directory.totalSize})`);
+        console.log(`- ${directory.name} (size: ${directory.totalSize})`);
     } );
     console.log(`Deleting the smallest deletable directory (${deletableDirectories[0].name})...`);
     console.log(`Done!\nNew available disk space: ${totalUsedSpace+deletableDirectories[0].totalSize}`);
