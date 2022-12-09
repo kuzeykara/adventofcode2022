@@ -128,11 +128,9 @@ function part02() {
         let visibleTreeCount: number = 0;
 
         for (let i=0; i<treesCovering.length; i++) {
+            visibleTreeCount++;
             if (treesCovering[i] >= treeHeight) {
-                visibleTreeCount++;
                 break;
-            } else {
-                visibleTreeCount++;
             }
         }
 
