@@ -1,3 +1,7 @@
-template.txt
+# modules and compiled js codes
 **/node_modules
 **/*.js
+
+# my helper files
+template.txt
+aoc_init.bat
